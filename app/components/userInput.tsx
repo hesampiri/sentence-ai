@@ -64,8 +64,10 @@ const UserInput = () => {
           onChange={(e) => setInputValue(e.target.value)}
           className="bg-white text-sm sm:text-base"
         />
+        <section className="text-sm sm:text-base">
+
         <Select onValueChange={setSelectedTone}>
-          <SelectTrigger className="w-full bg-white text-sm sm:text-base">
+          <SelectTrigger className="w-full bg-white ">
             <SelectValue placeholder="Select a Tone" />
           </SelectTrigger>
           <SelectGroup>
@@ -78,6 +80,7 @@ const UserInput = () => {
             </SelectContent>
           </SelectGroup>
         </Select>
+        </section>
 
         <Button onClick={() => Generate(inputValue, selectedTone)} className="cursor-pointer">
           {isLoading ? (

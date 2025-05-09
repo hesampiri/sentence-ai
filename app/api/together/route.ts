@@ -1,5 +1,5 @@
 import Together from "together-ai";
-const together = new Together();
+const together = new Together({apiKey: process.env.TOGETHER_API_KEY});
 
 if (!process.env.TOGETHER_API_KEY) throw new Error("missing API key");
 export async function POST(Req: Request) {
